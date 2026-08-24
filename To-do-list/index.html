@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="A modern and responsive task management application.">
+
+    <title>TaskFlow | Smart Task Manager</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet"
+          href="style.css">
+</head>
+
+<body>
+
+<!-- =====================================
+     BACKGROUND
+===================================== -->
+
+<div class="background">
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+</div>
+
+
+<!-- =====================================
+     HEADER
+===================================== -->
+
+<header class="header">
+
+    <div class="header-inner">
+
+        <a href="#" class="logo">
+            <div class="logo-icon">
+                <i class="fa-solid fa-check"></i>
+            </div>
+
+            <span>Task<span>Flow</span></span>
+        </a>
+
+
+        <div class="header-actions">
+
+            <button
+                class="icon-button"
+                id="themeToggle"
+                aria-label="Toggle theme">
+
+                <i class="fa-solid fa-moon"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================
+     MAIN
+===================================== -->
+
+<main class="container">
+
+
+    <!-- =================================
+         HERO
+    ================================== -->
+
+    <section class="hero">
+
+        <div>
+
+            <p class="eyebrow">
+                <span class="live-dot"></span>
+                PERSONAL PRODUCTIVITY
+            </p>
+
+            <h1>
+                Organize your day.
+                <span>Own your goals.</span>
+            </h1>
+
+            <p class="hero-description">
+                Plan smarter, stay focused and turn your
+                daily tasks into meaningful progress.
+            </p>
+
+        </div>
+
+
+        <div class="date-display">
+
+            <i class="fa-regular fa-calendar"></i>
+
+            <div>
+                <span id="currentDay">Monday</span>
+                <strong id="currentDate">
+                    January 1, 2026
+                </strong>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================
+         STAT CARDS
+    ================================== -->
+
+    <section class="stats-grid">
+
+        <div class="stat-card">
+
+            <div class="stat-icon total">
+                <i class="fa-solid fa-layer-group"></i>
+            </div>
+
+            <div>
+                <span>Total Tasks</span>
+                <strong id="totalTasks">0</strong>
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon pending">
+                <i class="fa-solid fa-hourglass-half"></i>
+            </div>
+
+            <div>
+                <span>Pending</span>
+                <strong id="pendingTasks">0</strong>
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon completed">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+
+            <div>
+                <span>Completed</span>
+                <strong id="completedTasks">0</strong>
+            </div>
+
+        </div>
+
+
+        <div class="stat-card progress-card">
+
+            <div class="progress-info">
+
+                <span>Daily Progress</span>
+
+                <strong id="progressPercent">
+                    0%
+                </strong>
+
+            </div>
+
+            <div class="progress-track">
+
+                <div
+                    class="progress-fill"
+                    id="progressFill">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================
+         ADD TASK
+    ================================== -->
+
+    <section class="task-form-card">
+
+        <div class="form-heading">
+
+            <div>
+
+                <p class="eyebrow">
+                    NEW TASK
+                </p>
+
+                <h2>
+                    What needs to be done?
+                </h2>
+
+            </div>
+
+            <div class="plus-icon">
+                <i class="fa-solid fa-plus"></i>
+            </div>
+
+        </div>
+
+
+        <form id="taskForm">
+
+            <div class="input-main">
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="e.g. Complete frontend assignment..."
+                    maxlength="100"
+                    autocomplete="off">
+
+                <span
+                    class="input-error"
+                    id="taskError">
+                </span>
+
+            </div>
+
+
+            <div class="form-options">
+
+
+                <!-- CATEGORY -->
+
+                <div class="field">
+
+                    <label for="category">
+                        <i class="fa-solid fa-tag"></i>
+                        Category
+                    </label>
+
+                    <select id="category">
+
+                        <option value="Personal">
+                            Personal
+                        </option>
+
+                        <option value="Work">
+                            Work
+                        </option>
+
+                        <option value="Study">
+                            Study
+                        </option>
+
+                        <option value="Health">
+                            Health
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- PRIORITY -->
+
+                <div class="field">
+
+                    <label for="priority">
+                        <i class="fa-solid fa-flag"></i>
+                        Priority
+                    </label>
+
+                    <select id="priority">
+
+                        <option value="Low">
+                            Low
+                        </option>
+
+                        <option value="Medium" selected>
+                            Medium
+                        </option>
+
+                        <option value="High">
+                            High
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- DATE -->
+
+                <div class="field">
+
+                    <label for="dueDate">
+                        <i class="fa-regular fa-calendar"></i>
+                        Due Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="dueDate">
+
+                </div>
+
+
+                <!-- ADD -->
+
+                <button
+                    type="submit"
+                    class="add-button">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Add Task
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+
+    <!-- =================================
+         TASK CONTROLS
+    ================================== -->
+
+    <section class="task-area">
+
+
+        <div class="toolbar">
+
+            <div class="toolbar-title">
+
+                <h2>
+                    My Tasks
+                </h2>
+
+                <span id="taskCountLabel">
+                    0 tasks
+                </span>
+
+            </div>
+
+
+            <div class="controls">
+
+
+                <!-- SEARCH -->
+
+                <div class="search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search tasks..."
+                        autocomplete="off">
+
+                </div>
+
+
+                <!-- FILTER -->
+
+                <select id="filterSelect">
+
+                    <option value="all">
+                        All Tasks
+                    </option>
+
+                    <option value="pending">
+                        Pending
+                    </option>
+
+                    <option value="completed">
+                        Completed
+                    </option>
+
+                    <option value="high">
+                        High Priority
+                    </option>
+
+                    <option value="today">
+                        Due Today
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <!-- CATEGORY FILTER -->
+
+        <div class="category-filter">
+
+            <button
+                class="category-button active"
+                data-category="all">
+
+                All
+
+            </button>
+
+            <button
+                class="category-button"
+                data-category="Work">
+
+                <i class="fa-solid fa-briefcase"></i>
+                Work
+
+            </button>
+
+            <button
+                class="category-button"
+                data-category="Study">
+
+                <i class="fa-solid fa-book"></i>
+                Study
+
+            </button>
+
+            <button
+                class="category-button"
+                data-category="Personal">
+
+                <i class="fa-solid fa-user"></i>
+                Personal
+
+            </button>
+
+            <button
+                class="category-button"
+                data-category="Health">
+
+                <i class="fa-solid fa-heart-pulse"></i>
+                Health
+
+            </button>
+
+        </div>
+
+
+        <!-- TASK LIST -->
+
+        <div
+            class="task-list"
+            id="taskList">
+        </div>
+
+
+        <!-- EMPTY STATE -->
+
+        <div
+            class="empty-state"
+            id="emptyState">
+
+            <div class="empty-icon">
+
+                <i class="fa-solid fa-clipboard-check"></i>
+
+            </div>
+
+            <h3>
+                No tasks here
+            </h3>
+
+            <p>
+                Add a new task and start making progress.
+            </p>
+
+        </div>
+
+
+        <!-- BOTTOM ACTIONS -->
+
+        <div class="bottom-actions">
+
+            <button
+                id="clearCompleted"
+                class="clear-button">
+
+                <i class="fa-solid fa-broom"></i>
+
+                Clear Completed
+
+            </button>
+
+            <span>
+                Your tasks are saved automatically
+                <i class="fa-solid fa-cloud"></i>
+            </span>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =====================================
+     EDIT MODAL
+===================================== -->
+
+<div
+    class="modal-overlay"
+    id="editModal">
+
+    <div class="modal">
+
+        <button
+            class="modal-close"
+            id="closeModal">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+        <div class="modal-heading">
+
+            <div class="modal-icon">
+                <i class="fa-solid fa-pen"></i>
+            </div>
+
+            <div>
+
+                <p class="eyebrow">
+                    EDIT TASK
+                </p>
+
+                <h2>
+                    Update your task
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="edit-form">
+
+            <label>
+                Task
+            </label>
+
+            <input
+                type="text"
+                id="editTaskInput"
+                maxlength="100">
+
+
+            <div class="edit-grid">
+
+                <div>
+
+                    <label>
+                        Category
+                    </label>
+
+                    <select id="editCategory">
+
+                        <option value="Personal">
+                            Personal
+                        </option>
+
+                        <option value="Work">
+                            Work
+                        </option>
+
+                        <option value="Study">
+                            Study
+                        </option>
+
+                        <option value="Health">
+                            Health
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div>
+
+                    <label>
+                        Priority
+                    </label>
+
+                    <select id="editPriority">
+
+                        <option value="Low">
+                            Low
+                        </option>
+
+                        <option value="Medium">
+                            Medium
+                        </option>
+
+                        <option value="High">
+                            High
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <label>
+                Due Date
+            </label>
+
+            <input
+                type="date"
+                id="editDueDate">
+
+
+            <button
+                id="saveEdit"
+                class="add-button">
+
+                <i class="fa-solid fa-check"></i>
+
+                Save Changes
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================
+     TOAST
+===================================== -->
+
+<div
+    class="toast"
+    id="toast">
+
+    <i class="fa-solid fa-circle-check"></i>
+
+    <span id="toastMessage">
+        Task added
+    </span>
+
+</div>
+
+
+<footer>
+
+    <p>
+        Built with HTML • CSS • JavaScript
+    </p>
+
+    <span>
+        TaskFlow © <span id="year"></span>
+    </span>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

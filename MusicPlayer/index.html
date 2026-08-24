@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VibeFlow Music Player</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">♫</div>
+            <div>
+                <h1>VibeFlow</h1>
+                <span>Music Player</span>
+            </div>
+        </div>
+
+        <nav>
+            <button class="nav-item active">
+                <span>🏠</span>
+                Home
+            </button>
+
+            <button class="nav-item">
+                <span>❤️</span>
+                Favorites
+            </button>
+
+            <button class="nav-item">
+                <span>🎵</span>
+                Playlist
+            </button>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="mini-info">
+                <span>🎧</span>
+                <div>
+                    <strong>Now Playing</strong>
+                    <small id="sideSong">Nothing playing</small>
+                </div>
+            </div>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+        <!-- HEADER -->
+        <header class="header">
+
+            <div>
+                <p class="welcome">WELCOME BACK 👋</p>
+                <h2>Your Music Space</h2>
+            </div>
+
+            <div class="search-box">
+                <span>🔎</span>
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search songs..."
+                >
+            </div>
+
+        </header>
+
+
+        <!-- HERO -->
+        <section class="hero">
+
+            <div class="hero-text">
+                <span class="badge">🎧 YOUR PERSONAL PLAYER</span>
+
+                <h2>
+                    Let the music
+                    <span>flow.</span>
+                </h2>
+
+                <p>
+                    Discover your favorite vibes and enjoy your music
+                    with a beautiful modern player.
+                </p>
+
+                <button class="start-btn" id="startBtn">
+                    ▶ Start Listening
+                </button>
+            </div>
+
+            <div class="hero-disc">
+                <div class="disc">
+                    <div class="disc-center">♫</div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- STATISTICS -->
+        <section class="stats">
+
+            <div class="stat-card">
+                <div class="stat-icon">🎵</div>
+                <div>
+                    <span>Total Songs</span>
+                    <strong id="totalSongs">3</strong>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">❤️</div>
+                <div>
+                    <span>Favorites</span>
+                    <strong id="favoriteCount">0</strong>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">⏱️</div>
+                <div>
+                    <span>Listening Time</span>
+                    <strong id="listeningTime">0:00</strong>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- PLAYLIST -->
+        <section class="playlist-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">YOUR COLLECTION</span>
+                    <h2>My Playlist</h2>
+                </div>
+
+                <label class="add-btn">
+                    ＋ Add Song
+                    <input
+                        type="file"
+                        id="fileInput"
+                        accept="audio/*"
+                        multiple
+                        hidden
+                    >
+                </label>
+
+            </div>
+
+
+            <div id="songList" class="song-list"></div>
+
+            <div id="noResults" class="no-results">
+                🔎 No songs found
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- PLAYER -->
+    <footer class="player">
+
+        <div class="current-song">
+
+            <div class="player-art" id="playerArt">
+                🎵
+            </div>
+
+            <div class="current-info">
+                <strong id="currentTitle">Choose a song</strong>
+                <span id="currentArtist">VibeFlow</span>
+            </div>
+
+            <button id="favoriteBtn" class="heart-btn">
+                ♡
+            </button>
+
+        </div>
+
+
+        <div class="player-center">
+
+            <div class="controls">
+
+                <button id="shuffleBtn" title="Shuffle">
+                    🔀
+                </button>
+
+                <button id="prevBtn" title="Previous">
+                    ⏮
+                </button>
+
+                <button id="playBtn" class="play-btn" title="Play">
+                    ▶
+                </button>
+
+                <button id="nextBtn" title="Next">
+                    ⏭
+                </button>
+
+                <button id="repeatBtn" title="Repeat">
+                    🔁
+                </button>
+
+            </div>
+
+            <div class="progress-area">
+
+                <span id="currentTime">0:00</span>
+
+                <input
+                    type="range"
+                    id="progressBar"
+                    min="0"
+                    max="100"
+                    value="0"
+                >
+
+                <span id="duration">0:00</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="volume-area">
+
+            <button id="muteBtn">
+                🔊
+            </button>
+
+            <input
+                type="range"
+                id="volumeBar"
+                min="0"
+                max="1"
+                step="0.01"
+                value="0.8"
+            >
+
+        </div>
+
+    </footer>
+
+</div>
+
+
+<!-- AUDIO ELEMENT -->
+<audio id="audioPlayer"></audio>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

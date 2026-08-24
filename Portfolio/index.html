@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Modern personal portfolio showcasing skills, projects and frontend development work.">
+
+    <title>Your Name | Frontend Developer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= PRELOADER ================= -->
+
+<div class="preloader">
+    <div class="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="header">
+
+    <nav class="navbar">
+
+        <a href="#home" class="logo">
+            <span>&lt;</span>DEV<span>/&gt;</span>
+        </a>
+
+        <div class="nav-menu" id="navMenu">
+
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#resume" class="nav-link">Resume</a>
+            <a href="#contact" class="nav-link">Contact</a>
+
+        </div>
+
+        <div class="nav-actions">
+
+            <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+            <button id="menuToggle" class="menu-btn" aria-label="Open menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<!-- ================= HOME ================= -->
+
+<main>
+
+<section id="home" class="hero">
+
+    <div class="hero-bg">
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+        <div class="grid-pattern"></div>
+    </div>
+
+    <div class="hero-content">
+
+        <div class="status-badge">
+            <span class="status-dot"></span>
+            Available for opportunities
+        </div>
+
+        <p class="hero-small">
+            HELLO, I'M
+        </p>
+
+        <h1>
+            <span>Indu</span>
+        </h1>
+
+        <h2>
+            I build <span id="typingText"></span>
+        </h2>
+
+        <p class="hero-description">
+            A passionate frontend developer focused on creating
+            modern, responsive and user-friendly digital experiences
+            using clean and efficient code.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#projects" class="btn primary-btn">
+                Explore My Work
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="#contact" class="btn secondary-btn">
+                Let's Connect
+            </a>
+
+        </div>
+
+        <div class="social-links">
+
+            <a href="https://github.com/" target="_blank" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+
+            <a href="mailto:yourmail@gmail.com" aria-label="Email">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="scroll-indicator">
+        <span></span>
+        Scroll to explore
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="section">
+
+    <div class="section-heading reveal">
+
+        <p class="section-label">01 — ABOUT ME</p>
+
+        <h2>
+            Turning ideas into
+            <span>digital experiences.</span>
+        </h2>
+
+    </div>
+
+    <div class="about-grid">
+
+        <div class="about-card glass reveal">
+
+            <div class="profile-placeholder">
+                <div class="profile-ring">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+            </div>
+
+            <div class="floating-card card-one">
+                <i class="fa-solid fa-code"></i>
+                <span>Clean Code</span>
+            </div>
+
+            <div class="floating-card card-two">
+                <i class="fa-solid fa-mobile-screen"></i>
+                <span>Responsive</span>
+            </div>
+
+        </div>
+
+
+        <div class="about-content reveal">
+
+            <p class="about-intro">
+                I'm a Computer Science student and aspiring software
+                engineer who enjoys transforming ideas into interactive
+                web experiences.
+            </p>
+
+            <p>
+                I love working with modern frontend technologies and
+                continuously improving my problem-solving and development
+                skills. My goal is to build applications that are not
+                only visually appealing but also useful and accessible.
+            </p>
+
+            <div class="about-stats">
+
+                <div class="stat">
+                    <strong>10+</strong>
+                    <span>Projects</span>
+                </div>
+
+                <div class="stat">
+                    <strong>3+</strong>
+                    <span>Technologies</span>
+                </div>
+
+                <div class="stat">
+                    <strong>100%</strong>
+                    <span>Curiosity</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SKILLS ================= -->
+
+<section id="skills" class="section skills-section">
+
+    <div class="section-heading reveal">
+
+        <p class="section-label">02 — SKILLS</p>
+
+        <h2>
+            My technical
+            <span>toolbox.</span>
+        </h2>
+
+    </div>
+
+    <div class="skills-grid">
+
+        <div class="skill-card glass reveal">
+
+            <div class="skill-icon html">
+                <i class="fa-brands fa-html5"></i>
+            </div>
+
+            <h3>HTML5</h3>
+
+            <p>
+                Semantic and accessible web structures.
+            </p>
+
+            <div class="skill-bar">
+                <span style="width: 90%"></span>
+            </div>
+
+        </div>
+
+
+        <div class="skill-card glass reveal">
+
+            <div class="skill-icon css">
+                <i class="fa-brands fa-css3-alt"></i>
+            </div>
+
+            <h3>CSS3</h3>
+
+            <p>
+                Responsive layouts, animations and modern UI.
+            </p>
+
+            <div class="skill-bar">
+                <span style="width: 88%"></span>
+            </div>
+
+        </div>
+
+
+        <div class="skill-card glass reveal">
+
+            <div class="skill-icon js">
+                <i class="fa-brands fa-js"></i>
+            </div>
+
+            <h3>JavaScript</h3>
+
+            <p>
+                Interactive interfaces and dynamic functionality.
+            </p>
+
+            <div class="skill-bar">
+                <span style="width: 82%"></span>
+            </div>
+
+        </div>
+
+
+        <div class="skill-card glass reveal">
+
+            <div class="skill-icon react">
+                <i class="fa-brands fa-react"></i>
+            </div>
+
+            <h3>React</h3>
+
+            <p>
+                Component-based modern frontend development.
+            </p>
+
+            <div class="skill-bar">
+                <span style="width: 70%"></span>
+            </div>
+
+        </div>
+
+
+        <div class="skill-card glass reveal">
+
+            <div class="skill-icon git">
+                <i class="fa-brands fa-git-alt"></i>
+            </div>
+
+            <h3>Git & GitHub</h3>
+
+            <p>
+                Version control and collaborative development.
+            </p>
+
+            <div class="skill-bar">
+                <span style="width: 80%"></span>
+            </div>
+
+        </div>
+
+
+        <div class="skill-card glass reveal">
+
+            <div class="skill-icon responsive">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+            </div>
+
+            <h3>Responsive Design</h3>
+
+            <p>
+                Interfaces optimized for every screen size.
+            </p>
+
+            <div class="skill-bar">
+                <span style="width: 92%"></span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section id="projects" class="section">
+
+    <div class="section-heading reveal">
+
+        <p class="section-label">03 — PROJECTS</p>
+
+        <h2>
+            Things I've
+            <span>built.</span>
+        </h2>
+
+    </div>
+
+
+    <div class="projects-grid">
+
+
+        <!-- PROJECT 1 -->
+
+        <article class="project-card reveal">
+
+            <div class="project-image project-one">
+
+                <div class="project-number">01</div>
+
+                <i class="fa-solid fa-microphone-lines project-big-icon"></i>
+
+            </div>
+
+            <div class="project-content">
+
+                <div class="project-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+
+                <h3>AI Virtual Interviewer</h3>
+
+                <p>
+                    An interactive interview platform designed to
+                    simulate real interview experiences with intelligent
+                    feedback and user interaction.
+                </p>
+
+                <a href="#" class="project-link">
+                    View Project
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- PROJECT 2 -->
+
+        <article class="project-card reveal">
+
+            <div class="project-image project-two">
+
+                <div class="project-number">02</div>
+
+                <i class="fa-solid fa-calculator project-big-icon"></i>
+
+            </div>
+
+            <div class="project-content">
+
+                <div class="project-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+
+                <h3>All Purpose Calculator</h3>
+
+                <p>
+                    A responsive calculator application featuring
+                    multiple calculations and a clean interactive
+                    interface.
+                </p>
+
+                <a href="#" class="project-link">
+                    View Project
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- PROJECT 3 -->
+
+        <article class="project-card reveal">
+
+            <div class="project-image project-three">
+
+                <div class="project-number">03</div>
+
+                <i class="fa-solid fa-list-check project-big-icon"></i>
+
+            </div>
+
+            <div class="project-content">
+
+                <div class="project-tags">
+                    <span>JavaScript</span>
+                    <span>LocalStorage</span>
+                    <span>UI</span>
+                </div>
+
+                <h3>Smart Task Manager</h3>
+
+                <p>
+                    A productivity-focused task management application
+                    with filtering, task states and persistent local data.
+                </p>
+
+                <a href="#" class="project-link">
+                    View Project
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= RESUME ================= -->
+
+<section id="resume" class="section resume-section">
+
+    <div class="resume-card glass reveal">
+
+        <div class="resume-icon">
+            <i class="fa-solid fa-file-lines"></i>
+        </div>
+
+        <div class="resume-content">
+
+            <p class="section-label">04 — RESUME</p>
+
+            <h2>
+                Want to know
+                <span>more about me?</span>
+            </h2>
+
+            <p>
+                Explore my education, technical skills, projects and
+                professional experience through my resume.
+            </p>
+
+            <a href="resume.pdf"
+               download="Your_Name_Resume.pdf"
+               class="btn primary-btn">
+
+                Download Resume
+                <i class="fa-solid fa-download"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="section contact-section">
+
+    <div class="section-heading reveal">
+
+        <p class="section-label">05 — CONTACT</p>
+
+        <h2>
+            Let's build something
+            <span>great.</span>
+        </h2>
+
+        <p class="contact-subtitle">
+            Have an idea, opportunity or just want to connect?
+            Send me a message.
+        </p>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+        <div class="contact-info reveal">
+
+            <div class="contact-item">
+
+                <div class="contact-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+
+                <div>
+                    <small>Email</small>
+                    <a href="mailto:yourmail@gmail.com">
+                        yourmail@gmail.com
+                    </a>
+                </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <div class="contact-icon">
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+
+                <div>
+                    <small>LinkedIn</small>
+                    <a href="#" target="_blank">
+                        linkedin.com/in/yourname
+                    </a>
+                </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <div class="contact-icon">
+                    <i class="fa-brands fa-github"></i>
+                </div>
+
+                <div>
+                    <small>GitHub</small>
+                    <a href="#" target="_blank">
+                        github.com/yourusername
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CONTACT FORM -->
+
+        <form id="contactForm" class="contact-form glass reveal">
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="name">Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Your name"
+                    >
+
+                    <small class="error" id="nameError"></small>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">Email</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="you@example.com"
+                    >
+
+                    <small class="error" id="emailError"></small>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="subject">Subject</label>
+
+                <input
+                    type="text"
+                    id="subject"
+                    placeholder="What would you like to discuss?"
+                >
+
+                <small class="error" id="subjectError"></small>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="message">Message</label>
+
+                <textarea
+                    id="message"
+                    rows="6"
+                    placeholder="Tell me about your idea..."
+                ></textarea>
+
+                <small class="error" id="messageError"></small>
+
+            </div>
+
+
+            <button type="submit" class="btn primary-btn submit-btn">
+
+                Send Message
+                <i class="fa-solid fa-paper-plane"></i>
+
+            </button>
+
+            <p id="formSuccess" class="form-success"></p>
+
+        </form>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <a href="#home" class="logo">
+            <span>&lt;</span>DEV<span>/&gt;</span>
+        </a>
+
+        <p>
+            Designed & built with curiosity and code.
+        </p>
+
+        <div class="footer-socials">
+
+            <a href="#">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+            © <span id="year"></span> Your Name. All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- Back To Top -->
+
+<button id="backToTop" class="back-top">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
